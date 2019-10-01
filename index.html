@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <title>Html Tablo Link Verme - Enar Teknoloji</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    /* Tabloya pointer yani işaret ile tıklama özelliği kazandırıyoruz */
+    .table-row{
+        cursor:pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Basic Table</h2>
+  
+  <table class='table table-bordered table-condensed table-striped table-hover'>
+      <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Country</th>
+      </tr>
+      <tr class="table-row"data-href="http://burakciftci.com">
+          <td>Jhohn</td>
+          <td>jhone@example.com</td>
+          <td>USA</td>
+      </tr>
+      <tr class="table-row" data-href="http://burakciftci.com">
+          <td>Kelly</td>
+          <td>kelly@example.com</td>
+          <td>USA</td>
+      </tr>
+      <tr class="table-row" data-href="http://enarteknoloji.com">
+          <td>Kamana</td>
+          <td>kamna@example.com</td>
+          <td>India</td>
+      </tr>
+      <tr class="table-row" data-href="http://enarteknoloji.com">
+          <td>Anay</td>
+          <td>anay@example.com</td>
+          <td>Canada</td>
+      </tr>
+  </table>
+</div>
+
+<script type="text/javascript">
+    /* <tr class="table-row" data-href=""> burada class ve data-href ile link özelliğini aktef ederek link veriyoruz */
+    $(document).ready(function($) {
+        $(".table-row").click(function() {
+            window.document.location = $(this).data("href");
+        });
+    });
+</script>
+</body>
+</html>
