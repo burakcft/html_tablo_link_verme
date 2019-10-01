@@ -1,2 +1,2 @@
-# html_tablo_link_verme
+# html tablo link verme
 Html tablo satırlarına bağımsız link verme
